@@ -11,8 +11,7 @@ Este projeto realiza uma análise completa das ocorrências aeronáuticas regist
 Utilizamos os campos `ocorrencia_latitude` e `ocorrencia_longitude` para mapear a distribuição espacial das ocorrências.
 
 ```pyth
-![latxlog](https://github.com/user-attachments/assets/8a429844-8808-4bae-b443-5a87a4257202)
-on
+
 
 plot(data=dt, x='ocorrencia_longitude', y='ocorrencia_latitude', hue='ocorrencia_uf')
 ```
@@ -23,7 +22,8 @@ plot(data=dt, x='ocorrencia_longitude', y='ocorrencia_latitude', hue='ocorrencia
 
 ### 2. Distribuição de Ocorrências por Estado (UF)
 
-```python
+``![latxlog](https://github.com/user-attachments/assets/42028fd8-0dbb-4bbb-82a5-2650e824f22e)
+`python
 sns.barplot(x=ocorrencias_por_uf.index, y=ocorrencias_por_uf.values)
 ```
 
@@ -32,6 +32,7 @@ sns.barplot(x=ocorrencias_por_uf.index, y=ocorrencias_por_uf.values)
 ---
 
 ### 3. Distribuição Espacial por Classificação da Ocorrência
+![uf_mp](https://github.com/user-attachments/assets/c2b2eaec-a672-4355-ab81-4f9a2cce44e5)
 
 ```python
 sns.scatterplot(data=dt, x='ocorrencia_longitude', y='ocorrencia_latitude', hue='ocorrencia_classificacao')
@@ -45,7 +46,8 @@ sns.scatterplot(data=dt, x='ocorrencia_longitude', y='ocorrencia_latitude', hue=
 
 ```python
 sns.kdeplot(x=subset['ocorrencia_longitude'], y=subset['ocorrencia_latitude'], fill=True)
-```
+```![ins_map](https://github.com/user-attachments/assets/45cb47ba-9ece-4422-8ce6-7482971f2d50)
+
 
 ![KDE Plot](imagens/kde_classificacao.png)
 
@@ -55,7 +57,8 @@ sns.kdeplot(x=subset['ocorrencia_longitude'], y=subset['ocorrencia_latitude'], f
 
 ```python
 folium.Map(location=[-15.7797, -47.9297], zoom_start=4)
-```
+```![uf](https://github.com/user-attachments/assets/7456f11c-f47c-4ecc-b943-41fa808a8e88)
+
 
 O mapa interativo foi salvo como:
 
