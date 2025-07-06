@@ -10,8 +10,11 @@ Este projeto realiza uma análise completa das ocorrências aeronáuticas regist
 
 Utilizamos os campos `ocorrencia_latitude` e `ocorrencia_longitude` para mapear a distribuição espacial das ocorrências.
 
-```python
-sns.scatterplot(data=dt, x='ocorrencia_longitude', y='ocorrencia_latitude', hue='ocorrencia_uf')
+```pyth
+![latxlog](https://github.com/user-attachments/assets/8a429844-8808-4bae-b443-5a87a4257202)
+on
+
+plot(data=dt, x='ocorrencia_longitude', y='ocorrencia_latitude', hue='ocorrencia_uf')
 ```
 
 ![Scatter Latitude vs Longitude](imagens/scatter_lat_lon.png)
@@ -92,8 +95,8 @@ ConfusionMatrixDisplay.from_estimator(...)
 ### 🔢 Exportação do Modelo
 
 ```python
-joblib.dump(clf_pipeline, 'modelo_ocorrencias_pipeline.joblib')
-```
+
+`
 
 ---
 
