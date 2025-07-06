@@ -22,8 +22,7 @@ plot(data=dt, x='ocorrencia_longitude', y='ocorrencia_latitude', hue='ocorrencia
 
 ### 2. Distribuição de Ocorrências por Estado (UF)
 
-``![latxlog](https://github.com/user-attachments/assets/42028fd8-0dbb-4bbb-82a5-2650e824f22e)
-`python
+
 sns.barplot(x=ocorrencias_por_uf.index, y=ocorrencias_por_uf.values)
 ```
 
@@ -32,7 +31,7 @@ sns.barplot(x=ocorrencias_por_uf.index, y=ocorrencias_por_uf.values)
 ---
 
 ### 3. Distribuição Espacial por Classificação da Ocorrência
-![uf_mp](https://github.com/user-attachments/assets/c2b2eaec-a672-4355-ab81-4f9a2cce44e5)
+
 
 ```python
 sns.scatterplot(data=dt, x='ocorrencia_longitude', y='ocorrencia_latitude', hue='ocorrencia_classificacao')
